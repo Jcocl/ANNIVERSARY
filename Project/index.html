@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#071b43">
+  <meta name="description" content="A tiny blue universe made with love—memories, games, letters, and surprises.">
+  <meta property="og:title" content="Happy Anniversary, Baby 💙">
+  <meta property="og:description" content="Open a tiny blue universe filled with memories, games, hidden notes, and one final surprise.">
+  <meta property="og:image" content="images/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Our Little Bubu & Dudu Universe 💙</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&amp;family=DM+Serif+Display:ital@0;1&amp;family=Nunito:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/refinement.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#welcome">Skip to our story</a>
+
+  <div class="ambient" aria-hidden="true">
+    <span class="ambient__orb ambient__orb--one"></span>
+    <span class="ambient__orb ambient__orb--two"></span>
+    <span class="ambient__orb ambient__orb--three"></span>
+  </div>
+
+  <section class="intro-screen" id="intro-screen" aria-labelledby="intro-title">
+    <div class="night-dust" aria-hidden="true"></div>
+    <div class="intro-cloud intro-cloud--one" aria-hidden="true"></div>
+    <div class="intro-cloud intro-cloud--two" aria-hidden="true"></div>
+    <div class="intro__content">
+      <p class="eyebrow eyebrow--light">a tiny universe made for one person</p>
+      <div class="bear-stage bear-stage--large intro-portrait js-bear" role="button" tabindex="0" aria-label="Tap our cartoon portrait">
+        <div class="intro-heart-portrait">
+          <img class="intro-heart-portrait__image" src="images/entrance/first-heart-portrait.png" alt="Cartoon portrait of us framed inside a heart">
+          <span class="intro-heart-portrait__sparkle intro-heart-portrait__sparkle--one" aria-hidden="true">✦</span>
+          <span class="intro-heart-portrait__sparkle intro-heart-portrait__sparkle--two" aria-hidden="true">✧</span>
+        </div>
+        <span class="bear-sign">you + me</span>
+      </div>
+      <h1 id="intro-title" data-config="intro.greeting">Hi, my Dear. 💙</h1>
+      <p class="intro__line" data-config="intro.subheading">I made a little universe for you…</p>
+      <button class="button button--glow" id="open-surprise" type="button">Open Your Surprise <span aria-hidden="true">💌</span></button>
+      <p class="tiny-note">Please slowly read and open each surprises with a smile.</p>
+    </div>
+  </section>
+
+  <section class="lock-screen is-hidden" id="lock-screen" aria-labelledby="lock-title">
+    <div class="lock-card">
+      <div class="lock-card__bear" aria-hidden="true">🐻‍❄️</div>
+      <p class="eyebrow">one tiny love lock</p>
+      <h2 id="lock-title">Only my Bubu Bear can enter 🐻💙</h2>
+      <form id="lock-form" novalidate>
+        <label for="password-input" id="lock-question">What do I call you?</label>
+        <div class="input-wrap">
+          <input id="password-input" type="password" autocomplete="off" enterkeyhint="go" placeholder="Your secret answer" required>
+          <button class="peek-button" id="peek-password" type="button" aria-label="Show password">👀</button>
+        </div>
+        <button class="button button--primary button--wide" type="submit">Let me in <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="lock-message" id="lock-message" aria-live="polite">Dudu is checking the guest list…</p>
+    </div>
+  </section>
+
+  <section class="grand-entrance is-hidden" id="grand-entrance" role="dialog" aria-modal="true" aria-labelledby="grand-entrance-title">
+    <div class="grand-entrance__aurora" aria-hidden="true"></div>
+    <div class="grand-entrance__stars" id="grand-entrance-stars" aria-hidden="true"></div>
+    <div class="grand-entrance__space-scene" aria-hidden="true">
+      <span class="entrance-comet entrance-comet--one"><img src="images/entrance/space-assets/comet.svg" alt=""></span>
+      <span class="entrance-comet entrance-comet--two"><img src="images/entrance/space-assets/comet.svg" alt=""></span>
+      <span class="entrance-comet entrance-comet--three"><img src="images/entrance/space-assets/comet.svg" alt=""></span>
+      <span class="space-bear-ship">
+        <span class="space-bear-ship__crew">
+          <img src="images/entrance/space-assets/bear.svg" alt="">
+          <img src="images/entrance/space-assets/panda.svg" alt="">
+        </span>
+        <img class="space-bear-ship__craft" src="images/entrance/space-assets/spaceship.svg" alt="">
+        <span class="space-bear-ship__trail"></span>
+      </span>
+      <img class="entrance-distant-rocket" src="images/entrance/space-assets/rocket.svg" alt="">
+    </div>
+    <div class="grand-entrance__curtain grand-entrance__curtain--left" aria-hidden="true"></div>
+    <div class="grand-entrance__curtain grand-entrance__curtain--right" aria-hidden="true"></div>
+    <div class="grand-entrance__content">
+      <p class="grand-entrance__loading">password accepted <span>✦</span> opening our universe</p>
+      <div class="grand-entrance__portal" id="grand-entrance-portal" aria-hidden="true">
+        <span class="grand-entrance__ring grand-entrance__ring--one"></span>
+        <span class="grand-entrance__ring grand-entrance__ring--two"></span>
+        <span class="grand-entrance__ring grand-entrance__ring--three"></span>
+        <span class="grand-entrance__orbit grand-entrance__orbit--one">💙</span>
+        <span class="grand-entrance__orbit grand-entrance__orbit--two">✦</span>
+        <img class="grand-entrance__couple-heads" src="images/entrance/cartoon-couple-heads.png" alt="">
+        <span class="grand-entrance__heart">💙</span>
+      </div>
+      <p class="grand-entrance__eyebrow">for the one person who makes everything brighter</p>
+      <h2 id="grand-entrance-title">Welcome home,<br><span data-name="nickname">Dear</span>.</h2>
+      <p class="grand-entrance__message">Every star, memory, laugh, and little surprise in here was made only for you.</p>
+      <div class="grand-entrance__actions">
+        <button class="button button--glow" id="grand-enter-music" type="button" disabled>Enter with music 💙</button>
+        <button class="grand-entrance__quiet" id="grand-enter-quiet" type="button" disabled>Enter quietly 😔</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="music-prompt is-hidden" id="music-prompt" role="dialog" aria-modal="true" aria-labelledby="music-prompt-title">
+    <div class="music-prompt__card">
+      <span class="music-prompt__icon" aria-hidden="true">🎵</span>
+      <h2 id="music-prompt-title">Music while you explore?</h2>
+      <p>Please, play it while exploring for full experience.</p>
+      <div class="button-row">
+        <button class="button button--primary" id="music-yes" type="button">Yes 💙</button>
+        <button class="button button--ghost" id="music-later" type="button">Maybe later😔</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="story-nav" id="story-nav">
+    <button class="brand-mark" id="brand-mark" type="button" aria-label="Our little universe home">
+      <span aria-hidden="true">🐻</span><span class="brand-mark__heart" aria-hidden="true">💙</span><span aria-hidden="true">🐼</span>
+    </button>
+    <div class="story-progress" aria-label="Experience progress">
+      <div class="story-progress__labels">
+        <span id="progress-label">Our story</span>
+        <span id="progress-percent">0%</span>
+      </div>
+      <div class="story-progress__track"><span id="progress-bar"></span></div>
+    </div>
+    <button class="icon-button sound-toggle" id="sound-toggle" type="button" aria-label="Mute sound effects" aria-pressed="false" title="Mute sound effects">🔊</button>
+    <button class="icon-button" id="achievements-button" type="button" aria-label="View achievements">🏆<span id="achievement-count">0</span></button>
+  </header>
+
+  <main id="experience">
+    <section class="welcome-section section" id="welcome" data-section="welcome">
+      <div class="welcome-sky" aria-hidden="true">
+        <span class="cloud cloud--one"></span>
+        <span class="cloud cloud--two"></span>
+        <span class="sparkle sparkle--one">✦</span>
+        <span class="sparkle sparkle--two">✧</span>
+      </div>
+      <div class="section__inner welcome-copy reveal">
+        <p class="eyebrow">welcome to our little universe</p>
+        <h2>Happy Anniversary,<br><span data-name="nickname">Dear</span> <span aria-hidden="true">💙</span></h2>
+        <p class="welcome-copy__sub">Another chapter of us told through memories, tiny games, hidden notes, and one very clingy Dear.</p>
+        <div class="anniversary-chip"><span aria-hidden="true">✦</span> <span id="anniversary-date">Our special day</span> <span aria-hidden="true">✦</span></div>
+        <div class="bear-stage js-bear" role="button" tabindex="0" aria-label="Tap the celebrating bear couple">
+          <span class="bear" aria-hidden="true">🐻</span>
+          <span class="hug-heart" aria-hidden="true">💙</span>
+          <span class="bear" aria-hidden="true">🐼</span>
+          <span class="reaction-bubble" aria-live="polite"></span>
+        </div>
+        <a class="button button--primary" href="#counter">Start Our Story <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="wave-divider" aria-hidden="true"></div>
+    </section>
+
+    <section class="counter-section section" id="counter" data-section="counter">
+      <div class="section__inner reveal">
+        <p class="eyebrow">our favorite timeline</p>
+        <h2>Together for…</h2>
+        <div class="counter-cloud" id="love-counter" aria-live="polite">
+          <div class="counter-unit"><strong data-counter="years">0</strong><span>years</span></div>
+          <div class="counter-unit"><strong data-counter="months">0</strong><span>months</span></div>
+          <div class="counter-unit"><strong data-counter="days">0</strong><span>days</span></div>
+          <div class="counter-unit"><strong data-counter="hours">0</strong><span>hours</span></div>
+          <div class="counter-unit"><strong data-counter="minutes">0</strong><span>mins</span></div>
+          <div class="counter-unit counter-unit--pulse"><strong data-counter="seconds">0</strong><span>secs</span></div>
+        </div>
+        <p class="handwritten-line">And somehow, I still want more time with you. 💙</p>
+      </div>
+    </section>
+
+    <section class="timeline-section section" id="story" data-section="story">
+      <button class="secret-heart secret-heart--timeline" data-secret-heart="timeline" type="button" aria-label="A hidden heart">💙</button>
+      <div class="section__inner">
+        <div class="section-heading reveal">
+          <p class="eyebrow">page by page</p>
+          <h2>How we became “us”</h2>
+          <p>Tap a memory to uncover the little thought hiding inside it.</p>
+        </div>
+        <div class="timeline" id="timeline-list"></div>
+      </div>
+    </section>
+
+    <section class="gallery-section section" id="memories" data-section="memories">
+      <button class="secret-heart secret-heart--gallery" data-secret-heart="gallery" type="button" aria-label="A hidden heart">💙</button>
+      <div class="section__inner">
+        <div class="section-heading reveal">
+          <p class="eyebrow">evidence of happiness</p>
+          <h2>Our memory scrapbook</h2>
+          <p>Tap a photograph, then swipe through the tiny moments that we build .</p>
+        </div>
+        <div class="polaroid-reel" id="gallery-reel" aria-label="Memory photographs"></div>
+        <p class="swipe-hint" aria-hidden="true">← swipe the memories →</p>
+      </div>
+    </section>
+
+    <section class="song-section section" id="song" data-section="song">
+      <div class="section__inner song-layout reveal">
+        <div class="vinyl-scene" id="vinyl-scene" aria-hidden="true">
+          <div class="vinyl"><div class="vinyl__label">us</div></div>
+          <div class="tonearm"></div>
+          <div class="dancing-bears">🐻 <span>♫</span> 🐼</div>
+        </div>
+        <div class="song-copy">
+          <p class="eyebrow">press play on a memory</p>
+          <h2>Our Song <span aria-hidden="true">🎵</span></h2>
+          <h3 id="song-title">Our Song</h3>
+          <p id="song-artist">Add your special song</p>
+          <button class="button button--primary" id="song-play" type="button">Tap to play our song 💙</button>
+          <div class="song-links" id="song-links"></div>
+          <audio id="song-audio" preload="metadata" loop></audio>
+        </div>
+      </div>
+    </section>
+
+    <section class="letter-section section" id="letter" data-section="letter">
+      <button class="secret-heart secret-heart--letter" data-secret-heart="letter" type="button" aria-label="A hidden heart">💙</button>
+      <div class="section__inner reveal">
+        <p class="eyebrow">this part is just between us</p>
+        <h2>I wrote something for you…</h2>
+        <div class="envelope-wrap" id="envelope-wrap">
+          <button class="envelope" id="open-letter" type="button" aria-label="Open love letter">
+            <span class="envelope__back"></span>
+            <span class="envelope__paper"><span>To <span data-name="nickname">Dear</span></span></span>
+            <span class="envelope__front"></span>
+            <span class="envelope__flap"></span>
+            <span class="envelope__seal">💙</span>
+          </button>
+          <button class="button button--soft" id="open-letter-label" type="button">Open Letter 💌</button>
+        </div>
+        <article class="love-letter is-hidden" id="love-letter" aria-live="polite"></article>
+      </div>
+    </section>
+
+    <section class="games-section section" id="games" data-section="games">
+      <button class="secret-heart secret-heart--games" data-secret-heart="games" type="button" aria-label="A hidden heart">💙</button>
+      <div class="section__inner">
+        <div class="section-heading reveal">
+          <p class="eyebrow eyebrow--light">side quests for my favorite player</p>
+          <h2>Love Arcade</h2>
+          <p>Finish a game, unlock a gift. It is extremely scientific.</p>
+        </div>
+
+        <article class="game-card game-card--catch reveal" id="catch-card">
+          <div class="game-card__heading">
+            <div><span class="game-number">01</span><h3>Catch My Heart</h3></div>
+            <strong id="catch-score">💙 0 / 10</strong>
+          </div>
+          <p>Drag the bear and catch ten falling hearts.</p>
+          <div class="catch-game" id="catch-game" aria-label="Catch falling hearts game">
+            <div class="catch-sky" id="catch-sky"></div>
+            <button class="catcher" id="catcher" type="button" aria-label="Drag me to catch hearts">🐼</button>
+            <div class="game-message" id="catch-message" aria-live="polite">Ready when you are.</div>
+          </div>
+          <button class="button button--soft" id="start-catch" type="button">Start the heart rain</button>
+          <button class="button button--primary is-hidden" id="claim-catch" type="button">Claim Your Reward 🎁</button>
+        </article>
+
+        <article class="game-card game-card--match reveal" id="match-card">
+          <div class="game-card__heading">
+            <div><span class="game-number">02</span><h3>Love Memory Match</h3></div>
+            <strong id="match-count">0 / 8</strong>
+          </div>
+          <p>Find all eight pairs. The cards promise not to judge your memory.</p>
+          <div class="match-grid" id="match-grid" aria-label="Memory matching game"></div>
+          <button class="button button--soft" id="reset-match" type="button">Shuffle cards</button>
+          <div class="game-complete is-hidden" id="match-complete">
+            <strong>You remembered them all…</strong>
+            <span>but my favorite memory will always be YOU my Dear. 💙</span>
+          </div>
+        </article>
+
+        <article class="game-card game-card--quiz reveal" id="quiz-card">
+          <div class="game-card__heading">
+            <div><span class="game-number">03</span><h3>How Well Do You Know Us?</h3></div>
+            <strong id="quiz-progress">1 / 6</strong>
+          </div>
+          <div id="quiz-stage"></div>
+          <p class="quiz-reaction" id="quiz-reaction" aria-live="polite"></p>
+          <button class="button button--soft is-hidden" id="quiz-next" type="button">Next question →</button>
+        </article>
+
+        <article class="game-card game-card--puzzle reveal" id="puzzle-card">
+          <div class="game-card__heading">
+            <div><span class="game-number">04</span><h3>Piece Us Together</h3></div>
+            <strong id="puzzle-moves">0 moves</strong>
+          </div>
+          <p>Slide the eight picture pieces into place. Tap a piece beside the empty space.</p>
+          <div class="puzzle-grid" id="puzzle-grid" aria-label="Three by three sliding puzzle"></div>
+          <button class="button button--soft" id="shuffle-puzzle" type="button">Shuffle puzzle</button>
+          <div class="game-complete is-hidden" id="puzzle-complete">My favorite puzzle is still figuring out how I got lucky enough to have you. 💙</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="secret-trail section" id="secret-trail" data-section="secrets">
+      <div class="section__inner reveal">
+        <div class="secret-map">
+          <div class="secret-map__copy">
+            <p class="eyebrow">psst… there is more</p>
+            <h2>Five hearts are hiding</h2>
+            <p>They are located around the story. Find every one to discover why there are exactly five.</p>
+          </div>
+          <div class="heart-meter">
+            <div class="heart-meter__icons" id="heart-meter-icons" aria-hidden="true"></div>
+            <strong>Secret Hearts: <span id="heart-count">0</span> / 5</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gifts-section section" id="gifts" data-section="gifts">
+      <div class="section__inner">
+        <div class="section-heading reveal">
+          <p class="eyebrow">rewards from the Dudu</p>
+          <h2>Four little surprises</h2>
+          <p>Each gift knows whether you have earned it. Yes, the gifts are dramatic.</p>
+        </div>
+        <div class="gift-reel" id="gift-reel">
+          <button class="gift-box" data-gift="catch" type="button"><span class="gift-box__emoji">🎁</span><strong>Heart Catcher</strong><small>Catch 10 hearts</small><span class="gift-status">Locked</span></button>
+          <button class="gift-box" data-gift="match" type="button"><span class="gift-box__emoji">🎁</span><strong>Memory Keeper</strong><small>Finish memory match</small><span class="gift-status">Locked</span></button>
+          <button class="gift-box" data-gift="hearts" type="button"><span class="gift-box__emoji">🎁</span><strong>Secret Finder</strong><small>Find all hidden hearts</small><span class="gift-status">Locked</span></button>
+          <button class="gift-box" data-gift="finale" type="button"><span class="gift-box__emoji">🎁</span><strong>Story Finisher</strong><small>Reach the final surprise</small><span class="gift-status">Locked</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="coupons-section section" id="coupons" data-section="coupons">
+      <div class="section__inner">
+        <div class="section-heading reveal">
+          <p class="eyebrow">tiny promises from me to you</p>
+          <h2>Little love coupons</h2>
+          <p>Pick one whenever your heart wants an extra little treat.</p>
+        </div>
+        <div class="coupon-wallet reveal">
+          <div class="coupon-wallet__header">
+            <div>
+              <span class="coupon-wallet__seal" aria-hidden="true">B<span>+</span>D</span>
+              <span><small>Your little blue coupon book</small><strong>Made with love for <span data-name="girlfriendName">YOUR GIRLFRIEND</span></strong></span>
+            </div>
+            <strong id="coupon-wallet-status" aria-live="polite">0 / 8 used</strong>
+          </div>
+          <div class="coupon-wallet__progress" role="progressbar" aria-label="Redeemed love coupons" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0">
+            <span id="coupon-wallet-progress"></span>
+          </div>
+          <div class="coupon-reel" id="coupon-reel" aria-label="Love coupons"></div>
+          <div class="coupon-wallet__footer">
+            <span>← swipe · choose · tap</span>
+            <span>each one is just for you 💙</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="jar-section section" id="love-jar" data-section="jar">
+      <div class="section__inner jar-layout reveal">
+        <div class="jar-scene" aria-hidden="true">
+          <div class="jar-lid"></div>
+          <div class="jar">
+            <span>💙</span><span>you</span><span>✨</span><span>us</span><span>💌</span><span>always</span>
+          </div>
+        </div>
+        <div class="jar-copy">
+          <p class="eyebrow">a jar that never empties</p>
+          <h2>Things I Love About You</h2>
+          <p>There are fifty notes inside. Draw as many as your heart wants.</p>
+          <button class="button button--primary" id="pick-note" type="button">Pick a Note <span aria-hidden="true">🫙</span></button>
+          <blockquote class="jar-note" id="jar-note" aria-live="polite">Your first note is waiting…</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="night-section section" id="night-sky" data-section="night">
+      <div class="night-scene" aria-hidden="true"><span class="shooting-star"></span></div>
+      <button class="moon" id="moon" type="button" aria-label="Press and hold the moon">🌙</button>
+      <div class="section__inner night-copy reveal">
+        <p class="eyebrow eyebrow--light">somewhere under the same sky</p>
+        <h2>If I could choose anyone<br>in every universe…</h2>
+        <p class="night-reveal">I’d still choose you.</p>
+        <div class="star-field" id="star-field" aria-label="Tap the stars for secret notes"></div>
+        <p class="night-hint">Tap the stars. Hold the moon. The sky keeps secrets.</p>
+        <div class="star-message" id="star-message" aria-live="polite">✦ a tiny message is waiting up here ✦</div>
+        <div class="stargazing-bears js-bear" role="button" tabindex="0" aria-label="Tap the stargazing bear couple">🐻 <span>⋆｡°✩</span> 🐼</div>
+      </div>
+    </section>
+
+    <section class="emotional-section section" id="still-choose-you" data-section="emotional">
+      <div class="sunrise-scene" aria-hidden="true">
+        <span class="sunrise-scene__stars"></span>
+        <span class="sunrise-scene__sun"></span>
+        <span class="sunrise-scene__cloud sunrise-scene__cloud--one"></span>
+        <span class="sunrise-scene__cloud sunrise-scene__cloud--two"></span>
+        <span class="sunrise-scene__cloud sunrise-scene__cloud--three"></span>
+        <span class="sunrise-scene__horizon"></span>
+      </div>
+      <div class="section__inner">
+        <div class="slow-lines" id="slow-lines">
+          <p class="reveal">We’ve had good days.</p>
+          <p class="reveal">We’ve had difficult days.</p>
+          <p class="reveal">We’ve misunderstood each other.</p>
+          <p class="reveal">We’ve annoyed each other.</p>
+          <p class="reveal">We’ve laughed until our stomachs hurt.</p>
+          <p class="reveal">But through every version of us…</p>
+          <p class="reveal slow-lines__answer">I still choose you my Dear.</p>
+        </div>
+        <div class="meaningful-memory reveal" id="meaningful-memory">
+          <div class="memory-placeholder" id="meaningful-photo"><span aria-hidden="true">🐻💙🐼</span><small>Add your most meaningful photo</small></div>
+          <p>Not because every moment is perfect. Because what we have is geniune love.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="funny-section section" id="funny" data-section="funny">
+      <div class="section__inner funny-layout reveal">
+        <div>
+          <p class="eyebrow">an official complaint form</p>
+          <h2>Things You Do That Drive Me Crazy 😂</h2>
+          <div class="complaint-list" id="funny-list"></div>
+        </div>
+        <div class="meme-bears js-bear" role="button" tabindex="0" aria-label="Tap the dramatic bears">
+          <div class="meme-bears__panel"><span aria-hidden="true">🐻</span><strong>“I’m not hungry.” - bubu</strong></div>
+          <div class="meme-bears__panel"><span aria-hidden="true">🐼🍟</span><strong>five minutes later</strong></div>
+          <span class="reaction-bubble" aria-live="polite"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="media-section section" id="messages" data-section="media">
+      <div class="section__inner">
+        <div class="section-heading reveal">
+          <p class="eyebrow">save these spaces for our best moments</p>
+          <h2>Your laugh and Joy</h2>
+        </div>
+        <div class="media-grid">
+          <article class="phone-frame reveal">
+            <div class="phone-frame__speaker"></div>
+            <div id="video-container" class="media-placeholder"><span aria-hidden="true">🎬</span><strong>Your personal video goes here</strong><small>Add videos/message.mp4 in config.js</small></div>
+          </article>
+          <article class="voice-card reveal">
+            <div class="voice-card__icon" aria-hidden="true">🎙️</div>
+            <p class="eyebrow">close your eyes and listen</p>
+            <h3>A little voice note</h3>
+            <p>Some things you deserve to be heard in my own voice.</p>
+            <button class="button button--soft" id="voice-play" type="button">▶ Hear My Message</button>
+            <audio id="voice-audio" preload="metadata"></audio>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="finale-section section" id="finale" data-section="finale">
+      <div class="finale-stars" aria-hidden="true"></div>
+      <div class="section__inner finale-copy reveal">
+        <p class="eyebrow eyebrow--light">the final surprise</p>
+        <h2>You’ve reached the end…</h2>
+        <p>But there is one last thing.</p>
+        <button class="final-gift" id="open-finale" type="button" aria-label="Open final surprise">
+          <span class="final-gift__lid">🎀</span>
+          <span class="final-gift__box">🎁</span>
+          <small>tap very carefully</small>
+        </button>
+        <button class="button button--glow" id="open-finale-label" type="button">Open My Final Surprise 🎁</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" data-section="footer">
+    <button class="secret-heart secret-heart--footer" data-secret-heart="footer" type="button" aria-label="A hidden heart">💙</button>
+    <div class="footer__bears js-bear" role="button" tabindex="0" aria-label="Tap the footer bears">🐻 💙 🐼</div>
+    <p>Made with an unreasonable amount of love by <span data-name="myName">John Clark Oclarit</span>.</p>
+    <p class="tiny-note">This website is only made JUST FOR US.</p>
+    <button class="text-button" id="reset-progress" type="button">Reset this device’s progress</button>
+  </footer>
+
+  <div class="floating-actions">
+    <button class="kiss-button" id="kiss-button" type="button" aria-label="Send a kiss"><span aria-hidden="true">💋</span><small>Need a kiss?</small></button>
+    <div class="love-menu" id="love-menu">
+      <div class="love-menu__panel is-hidden" id="love-menu-panel" aria-label="Little love shortcuts">
+        <button type="button" data-love-action="note">💌 <span>Read a love note</span></button>
+        <button type="button" data-love-action="memory">📸 <span>Random memory</span></button>
+        <button type="button" data-love-action="kiss">😘 <span>Send a kiss</span></button>
+        <button type="button" data-love-action="song">🎵 <span>Play our song</span></button>
+        <button type="button" data-love-action="bear">🐻 <span>Bear surprise</span></button>
+      </div>
+      <button class="love-menu__toggle" id="love-menu-toggle" type="button" aria-expanded="false" aria-controls="love-menu-panel" aria-label="Open love menu">💙</button>
+    </div>
+  </div>
+
+  <div class="wandering-surprise" id="wandering-surprise" aria-hidden="true">
+    <span class="wandering-surprise__trail"></span>
+    <span class="wandering-surprise__sparkles">✦ · 💙 · ✧</span>
+    <span class="wandering-surprise__sticker">
+      <img class="wandering-surprise__image" id="wandering-surprise-image" src="images/surprises/bubu-dudu-nose-touch.gif" alt="">
+    </span>
+    <span class="wandering-surprise__caption" id="wandering-surprise-caption">Bubu &amp; Dudu found you!</span>
+  </div>
+
+  <div class="gallery-modal is-hidden" id="gallery-modal" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-title">
+    <button class="modal-close" id="gallery-close" type="button" aria-label="Close memory">×</button>
+    <button class="gallery-arrow gallery-arrow--left" id="gallery-prev" type="button" aria-label="Previous memory">‹</button>
+    <article class="gallery-modal__card">
+      <div class="gallery-modal__image" id="gallery-modal-image"></div>
+      <p class="eyebrow" id="gallery-modal-meta"></p>
+      <h2 id="gallery-modal-title">Memory title</h2>
+      <p id="gallery-modal-caption"></p>
+      <button class="secret-note-button" id="memory-secret" type="button">Tap for the secret note 💙</button>
+      <p class="memory-secret is-hidden" id="memory-secret-text"></p>
+    </article>
+    <button class="gallery-arrow gallery-arrow--right" id="gallery-next" type="button" aria-label="Next memory">›</button>
+  </div>
+
+  <div class="modal is-hidden" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__card">
+      <button class="modal-close" data-close-modal type="button" aria-label="Close">×</button>
+      <div class="modal__icon" id="modal-icon" aria-hidden="true">💙</div>
+      <h2 id="modal-title">A little surprise</h2>
+      <div id="modal-body"></div>
+      <div id="modal-actions" class="button-row"></div>
+    </div>
+  </div>
+
+  <div class="achievement-toast" id="achievement-toast" role="status" aria-live="polite">
+    <span class="achievement-toast__icon" id="achievement-toast-icon">🏆</span>
+    <div><small>Achievement unlocked</small><strong id="achievement-toast-title">First Surprise</strong><span id="achievement-toast-copy">Opened the anniversary website</span></div>
+  </div>
+
+  <div class="kiss-pop" id="kiss-pop" aria-live="polite"><span aria-hidden="true">💋</span><strong>MWAH!</strong></div>
+
+  <div class="cinematic is-hidden" id="cinematic" role="dialog" aria-modal="true" aria-labelledby="cinematic-title">
+    <button class="cinematic__close" id="cinematic-close" type="button" aria-label="Close final surprise">×</button>
+    <div class="cinematic__sky" id="cinematic-sky" aria-hidden="true"></div>
+    <div class="cinematic__content">
+      <div class="cinematic__bears" aria-hidden="true">🐻<span>💙</span>🐼</div>
+      <h2 id="cinematic-title">Happy Anniversary. 💙</h2>
+      <div class="cinematic__lines" id="cinematic-lines"></div>
+      <div class="cinematic__photo" id="cinematic-photo"><span aria-hidden="true">our favorite<br>photo</span></div>
+      <p class="cinematic__signature">I love you.<br>— <span data-name="myName">Bubu</span></p>
+      <button class="button button--glow is-hidden" id="one-more-thing" type="button">One More Thing… 💙</button>
+    </div>
+  </div>
+
+  <div class="forever-question is-hidden" id="forever-question" role="dialog" aria-modal="true" aria-labelledby="forever-title">
+    <div class="forever-question__card">
+      <div aria-hidden="true" class="forever-question__bears">🐻💍🐼</div>
+      <p>This website may end here…<br>but our story doesn’t.</p>
+      <h2 id="forever-title">Ready for another year with me?</h2>
+      <div class="forever-question__actions" id="forever-actions">
+        <button class="button button--primary" id="yes-button" type="button">YES 💙</button>
+        <button class="button button--ghost" id="no-button" type="button">NO 😭</button>
+      </div>
+      <p class="forever-message" id="forever-message" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <noscript>
+    <div class="noscript">This love story needs JavaScript to open its surprises. Please enable it and refresh. 💙</div>
+  </noscript>
+</body>
+</html>
