@@ -1,0 +1,6 @@
+Add your personal video here.
+
+Recommended filename:
+- message.mp4
+
+Then set videoMessage: "videos/message.mp4" in js/config.js.
