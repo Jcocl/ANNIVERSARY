@@ -1,0 +1,156 @@
+@keyframes bearBob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+@keyframes bearBobTwo {
+  0%, 100% { transform: translateY(-2px) rotate(2deg); }
+  50% { transform: translateY(-10px) rotate(-2deg); }
+}
+
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.22); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.18); }
+  70% { transform: scale(1); }
+}
+
+@keyframes driftOne {
+  0%, 100% { transform: translate3d(0,0,0); }
+  50% { transform: translate3d(22px,-7px,0); }
+}
+
+@keyframes driftTwo {
+  0%, 100% { transform: translate3d(0,0,0); }
+  50% { transform: translate3d(-28px,8px,0); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: .42; filter: brightness(.82); }
+  50% { opacity: 1; filter: brightness(1.35) drop-shadow(0 0 7px currentColor); }
+}
+
+@keyframes vinylSpin { to { transform: rotate(360deg); } }
+
+@keyframes bearDance {
+  from { transform: translateY(0) rotate(-2deg); }
+  to { transform: translateY(-9px) rotate(3deg); }
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+@keyframes heartFall {
+  from { transform: translateY(0) rotate(0); }
+  to { transform: translateY(410px) rotate(300deg); }
+}
+
+@keyframes caughtPulse {
+  0% { transform: scale(.7); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes giftWiggle {
+  0%, 88%, 100% { transform: rotate(0); }
+  91% { transform: rotate(-8deg); }
+  94% { transform: rotate(8deg); }
+  97% { transform: rotate(-5deg); }
+}
+
+@keyframes noteDraw {
+  from { opacity: 0; transform: translateY(45px) rotate(7deg) scale(.82); }
+  to { opacity: 1; transform: translateY(0) rotate(-1deg) scale(1); }
+}
+
+@keyframes shooting {
+  0% { opacity: 0; transform: translate3d(-180px,90px,0) rotate(-25deg) scaleX(.2); }
+  15% { opacity: 1; }
+  55% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(550px,-210px,0) rotate(-25deg) scaleX(1); }
+}
+
+@keyframes kissPop {
+  0% { opacity: 0; transform: translate(-50%, 30px) scale(.7) rotate(-8deg); }
+  24% { opacity: 1; transform: translate(-50%, -8px) scale(1.1) rotate(4deg); }
+  68% { opacity: 1; transform: translate(-50%, -12px) scale(1) rotate(0); }
+  100% { opacity: 0; transform: translate(-50%, -70px) scale(.9); }
+}
+
+@keyframes confettiFall {
+  0% { opacity: 1; transform: translate3d(0,-20px,0) rotate(0); }
+  100% { opacity: 0; transform: translate3d(var(--drift, 30px),110vh,0) rotate(900deg); }
+}
+
+@keyframes fireworkBurst {
+  0% { opacity: 1; transform: scale(.08); }
+  70% { opacity: 1; }
+  100% { opacity: 0; transform: scale(1.55); }
+}
+
+@keyframes heartFloatUp {
+  0% { opacity: 0; transform: translate(-50%,0) scale(.5) rotate(0); }
+  20% { opacity: 1; }
+  100% { opacity: 0; transform: translate(calc(-50% + var(--drift, 15px)),-190px) scale(1.25) rotate(var(--rotate, 14deg)); }
+}
+
+.secret-heart-burst {
+  position: fixed;
+  z-index: 2200;
+  pointer-events: none;
+  font-size: var(--heart-size, 1rem);
+  line-height: 1;
+  filter: drop-shadow(0 4px 7px rgba(21,59,122,.2));
+  will-change: transform, opacity;
+  animation: secretHeartRadial var(--heart-duration, 1000ms) cubic-bezier(.16,.72,.22,1) forwards;
+}
+
+@keyframes secretHeartRadial {
+  0% { opacity: 0; transform: translate(-50%,-50%) scale(.25) rotate(0deg); }
+  12% { opacity: 1; }
+  72% { opacity: 1; }
+  100% { opacity: 0; transform: translate(calc(-50% + var(--heart-x)),calc(-50% + var(--heart-y))) scale(1.12) rotate(var(--heart-spin)); }
+}
+
+@keyframes cinematicPulse {
+  0%, 100% { text-shadow: 0 0 25px rgba(89,187,255,.4); }
+  50% { text-shadow: 0 0 55px rgba(89,187,255,.9); }
+}
+
+@keyframes moonGlow {
+  0%, 100% { filter: drop-shadow(0 0 25px rgba(255,237,168,.5)); }
+  50% { filter: drop-shadow(0 0 48px rgba(255,237,168,.9)); }
+}
+
+.bear-stage .bear:first-of-type { animation: bearBob 3.2s ease-in-out infinite; }
+.bear-stage .bear:last-of-type { animation: bearBobTwo 3.2s .15s ease-in-out infinite; }
+.stage-heart, .hug-heart, .brand-mark__heart { animation: heartBeat 2.2s ease-in-out infinite; }
+.intro-cloud--one, .cloud--one { animation: driftOne 8s ease-in-out infinite; }
+.intro-cloud--two, .cloud--two { animation: driftTwo 10s ease-in-out infinite; }
+.sparkle--one { animation: twinkle 2.1s ease-in-out infinite; }
+.sparkle--two { animation: twinkle 2.8s .4s ease-in-out infinite; }
+.counter-unit--pulse strong { animation: heartBeat 2.1s ease-in-out infinite; }
+.shooting-star { animation: shooting 7s 1s ease-in-out infinite; }
+.moon { animation: moonGlow 3.5s ease-in-out infinite; }
+.tap-star { animation: twinkle var(--twinkle, 2.6s) ease-in-out infinite; }
+.final-gift { animation: bearBob 2.8s ease-in-out infinite; }
+.cinematic__declaration { animation: cinematicPulse 2.1s ease-in-out infinite; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease, transform .75s cubic-bezier(.2,.8,.3,1);
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+  .falling-heart { animation-duration: 3.8s !important; }
+}

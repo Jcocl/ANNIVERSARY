@@ -1,0 +1,80 @@
+/* Phones first: 375–430px is the primary canvas. */
+@media (max-width: 374px) {
+  .section__inner { width: min(100% - 26px, 1120px); }
+  .story-nav { padding-inline: 8px; gap: 6px; }
+  .brand-mark { min-width: 50px; }
+  .match-grid { gap: 5px; }
+  .match-card { border-radius: 12px; }
+  .game-card { padding-inline: 13px; }
+  .game-card__heading { display: block; }
+  .game-card__heading > strong { display: inline-block; margin-top: 9px; }
+  .floating-actions { right: 8px; }
+  .kiss-button { display: none; }
+  .gallery-modal { grid-template-columns: 38px minmax(0, 1fr) 38px; padding-inline: 5px; }
+  .gallery-arrow { width: 38px; }
+}
+
+@media (min-width: 431px) {
+  .section__inner { width: min(100% - 48px, 1120px); }
+  .game-card { padding: 28px; }
+  .counter-cloud { grid-template-columns: repeat(6, 1fr); border-radius: 65px; }
+  .story-nav { padding-inline: 20px; }
+  .polaroid { flex-basis: 310px; }
+  .coupon { flex-basis: 310px; }
+}
+
+@media (min-width: 700px) {
+  .story-nav { width: min(calc(100% - 40px), 920px); top: 14px; height: 68px; margin: 0 auto -68px; border: 1px solid rgba(255,255,255,.75); border-radius: 22px; }
+  .welcome-section { padding-top: 150px; }
+  .section__inner { width: min(100% - 64px, 1120px); }
+  .counter-cloud { padding: 30px 24px; }
+  .timeline::before { left: 50%; transform: translateX(-50%); }
+  .timeline-item { width: 50%; padding: 0 55px 0 0; }
+  .timeline-item:nth-child(even) { margin-left: 50%; padding: 0 0 0 55px; }
+  .timeline-item__dot { left: auto; right: -18px; }
+  .timeline-item:nth-child(even) .timeline-item__dot { left: -18px; right: auto; }
+  .timeline-card { border-radius: 30px 30px 8px 30px; }
+  .timeline-item:nth-child(even) .timeline-card { border-radius: 30px 30px 30px 8px; }
+  .song-layout, .jar-layout, .funny-layout { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
+  .song-copy, .jar-copy { text-align: left; }
+  .song-links { justify-content: flex-start; }
+  .games-section .section__inner { max-width: 980px; }
+  .game-card { padding: 32px; }
+  .match-grid { max-width: 670px; margin-inline: auto; gap: 12px; }
+  .match-card { aspect-ratio: .8; }
+  .quiz-options { grid-template-columns: 1fr 1fr; }
+  .secret-map { grid-template-columns: 1fr auto; align-items: center; padding: 38px; }
+  .media-grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: center; }
+  .gallery-modal { grid-template-columns: 58px minmax(0, 560px) 58px; gap: 15px; }
+  .forever-question__actions { min-height: 100px; }
+}
+
+@media (min-width: 960px) {
+  .polaroid-reel, .coupon-reel, .gift-reel { margin-inline: 0; padding-inline: 10px; }
+  .polaroid-reel { display: grid; grid-template-columns: repeat(4, 1fr); align-items: start; overflow: visible; }
+  .polaroid { min-width: 0; min-height: 340px; }
+  .polaroid__image { min-height: 230px; }
+  .polaroid:nth-child(2n) { margin-top: 38px; }
+  .swipe-hint { display: none; }
+  .gift-reel { display: grid; grid-template-columns: repeat(4, 1fr); overflow: visible; }
+  .gift-box { min-width: 0; }
+  .coupon-reel { display: grid; grid-template-columns: repeat(4, 1fr); overflow: visible; }
+  .coupon { min-width: 0; }
+  .funny-layout { grid-template-columns: 1.1fr .9fr; }
+  .meme-bears { grid-template-columns: 1fr 1fr; }
+  .meme-bears__panel { min-height: 300px; }
+  .floating-actions { right: 28px; bottom: 28px; }
+}
+
+@media (min-width: 1280px) {
+  .welcome-section { min-height: 900px; }
+  .secret-heart--timeline { right: 5%; }
+  .secret-heart--gallery { left: 5%; }
+}
+
+@media (orientation: landscape) and (max-height: 540px) {
+  .intro-screen, .lock-screen { position: absolute; min-height: 620px; }
+  .intro__content { transform: scale(.86); }
+  .bear-stage--large { min-height: 120px; }
+  .bear-stage--large .bear { font-size: 5rem; }
+}
