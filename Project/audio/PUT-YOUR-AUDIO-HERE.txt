@@ -1,0 +1,7 @@
+Add your song and voice-note files here.
+
+Recommended filenames:
+- our-song.mp3
+- message.mp3
+
+Then set the matching paths in js/config.js.
